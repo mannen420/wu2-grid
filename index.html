@@ -1,23 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+ .grid-container {
+  display: grid;
+  height: 100vh; /* Full screen height */
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  grid-template-rows: 1fr 1fr; /* Two equal rows */
+  gap: 10px; /* Space between boxes */
+}
+
+.big-box {
+  grid-column: 1 / 2; /* Spans first column */
+  grid-row: 1 / 3; /* Spans both rows */
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-right {
+  grid-column: 2 / 3; /* Right side */
+  grid-row: 1 / 2; /* Top half */
+  background-color: lightcoral;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-right {
+  grid-column: 2 / 3; /* Right side */
+  grid-row: 2 / 3; /* Bottom half */
+  background-color: lightgreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body> 
 
-    <style>
-        .grid-container {
-            display: grid;
-        }
-    </style>
-    
-    <div class=”grid-container”>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-    </div>
-    
+    <div class="grid-container">
+        <div class="big-box">Big Box</div>
+        <div class="top-right">Top Right</div>
+        <div class="bottom-right">Bottom Right</div>
+      </div>
+      
 </body>
 </html>
