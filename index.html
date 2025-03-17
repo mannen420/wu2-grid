@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
- .grid-container {
-  display: grid;
-  height: 100vh; /* Full screen height */
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  grid-template-rows: 1fr 1fr; /* Two equal rows */
-  gap: 10px; /* Space between boxes */
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  html, body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    
+  }
+  .item1{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    
+  }
+  .gridcontainer{
+    width: 100%;
+    height: 100%;
+   
+    grid-template-columns: 4fr 4fr ;
+    grid-template-rows: 4fr 4fr ;
+    display: grid;
+    grid
+    background-color: #2196F3;
+    
 
-.big-box {
-  grid-column: 1 / 2; /* Spans first column */
-  grid-row: 1 / 3; /* Spans both rows */
-  background-color: lightblue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.top-right {
-  grid-column: 2 / 3; /* Right side */
-  grid-row: 1 / 2; /* Top half */
-  background-color: lightcoral;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.bottom-right {
-  grid-column: 2 / 3; /* Right side */
-  grid-row: 2 / 3; /* Bottom half */
-  background-color: lightgreen;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  }
+  .gridcontainer > div {
+    border-style: solid;
+    border-width: 5%;
+  }
 
 </style>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 
-<body> 
+<body>
+  <div class="gridcontainer">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+ 
+</div>
 
-    <div class="grid-container">
-        <div class="big-box">Big Box</div>
-        <div class="top-right">Top Right</div>
-        <div class="bottom-right">Bottom Right</div>
-      </div>
-      
+
+
+
 </body>
 </html>
